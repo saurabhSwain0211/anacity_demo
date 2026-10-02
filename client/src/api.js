@@ -1,4 +1,4 @@
-const BASE=import.meta.env.VITE_API_URL||'http://localhost:4000/api';
+const BASE=import.meta.env.VITE_API_URL||'https://anacity-demo.onrender.com/api';
 export async function api(path,{token,...options}={}){
  const headers={...(options.body instanceof FormData?{}:{'Content-Type':'application/json'}),...(token?{Authorization:`Bearer ${token}`}:{}) ,...options.headers};
  const res=await fetch(`${BASE}${path}`,{...options,headers});
