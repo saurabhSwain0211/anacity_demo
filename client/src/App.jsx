@@ -213,7 +213,7 @@ function App() {
         method: 'POST',
         body: JSON.stringify({
           message: m,
-          requestId: selected?.id || null
+          requestId: selected?.id || undefined
         })
       });
   
